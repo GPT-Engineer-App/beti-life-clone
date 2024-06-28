@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Index = () => {
   return (
@@ -11,6 +13,18 @@ const Index = () => {
         <Link to="/about" className="text-blue-500">About</Link>
         <Link to="/contact" className="text-blue-500">Contact</Link>
       </nav>
+      <Card className="mt-8">
+        <CardHeader>
+          <CardTitle>Featured Bet</CardTitle>
+          <CardDescription>Check out our featured bet of the day!</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>Bet on your favorite team and win big!</p>
+        </CardContent>
+        <CardFooter>
+          <Button variant="outline">Place Bet</Button>
+        </CardFooter>
+      </Card>
     </div>
   );
 };
